@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Seat Cover Types</title>
+  <link rel="stylesheet" href="tire.css">
+</head>
+<body>
+  <header>
+    <h1>Spoiler Types</h1>
+  </header>
+
+  <div class="container">
+    <div class="type-selector">
+      <ul>
+        <li class="active" data-type="leather">Front spoiler</li>
+        <li data-type="neoprene">Rear spoiler</li>
+        <li data-type="mesh">Wing Spoiler</li>
+      </ul>
+    </div>
+
+    <!-- <img id="spoiler-image" src="" alt="spoiler image"> -->
+
+<!-- <script>
+  const spoilerImage = document.getElementById('spoiler-image');
+  const spoilerTypeItems = document.querySelectorAll('.type-selector li');
+  
+  // Define the image URLs for each spoiler type
+  const imageUrls = {
+    'leather': 'https://hips.hearstapps.com/hmg-prod/images/dwburnett-pcoty-roughs-2-146-1652372829.jpg?crop=1.00xw:0.752xh;0,0.0577xh&resize=1200:*',
+    'neoprene': 'rear_spoiler.jpg',
+    'mesh': 'wing_spoiler.jpg'
+  };
+  
+  // Add click event listeners to each spoiler type item
+  spoilerTypeItems.forEach(item => {
+    item.addEventListener('click', () => {
+      // Remove the "active" class from all items
+      spoilerTypeItems.forEach(item => item.classList.remove('active'));
+      // Add the "active" class to the clicked item
+      item.classList.add('active');
+      // Set the src attribute of the image to the corresponding URL
+      spoilerImage.src = imageUrls[item.dataset.type];
+    });
+  });
+</script> -->
+    <div class="type-details">
+      <h2>Front spoiler</h2>
+      <p>Reduces air lift under the front of the car and improves downforce</p>
+      <ul>
+        <li>enhances stability and handling at high speeds</li>
+        <li>ncreases traction</li>
+        <li>Protects your original seats from wear and tear</li>
+      </ul>
+      <button class="button">Buy Now</button>
+    </div>
+  </div>
+
+  <script>
+    const typeSelector = document.querySelector('.type-selector');
+    const typeSelectorItems = typeSelector.querySelectorAll('li');
+    const typeDetails = document.querySelector('.type-details');
+    const typeDetailsHeading = typeDetails.querySelector('h2');
+    const typeDetailsDescription = typeDetails.querySelector('p');
+    const typeDetailsList = typeDetails.querySelector('ul');
+
+    typeSelectorItems.forEach(item => {
+      item.addEventListener('click', () => {
+        // Remove active class from all items
+        typeSelectorItems.forEach(item => item.classList.remove('active'));
+
+        // Set active class on clicked item
+        item.classList.add('active');
+
+        // Update type details based on clicked item
+        const type = item.dataset.type;
+        switch (type) {
+          case 'leather':
+            typeDetailsHeading.textContent = 'Front spoiler';
+            typeDetailsDescription.textContent = 'Reduces air lift under the front of the car and improves downforce';
+            typeDetailsList.innerHTML = '<li>enhances stability and handling at high speeds</li><li>increases traction</li><li>improves fuel efficiency</li>';
+            break;
+          case 'neoprene':
+            typeDetailsHeading.textContent = 'Rear spoiler';
+            typeDetailsDescription.textContent = ' Reduces air turbulence at the rear of the car and increases downforce';
+            typeDetailsList.innerHTML = '<li>enhances traction and stability during cornering</li><li>reduces lift and drag</li><li>improves fuel efficiency</li>';
+            break;
+          case 'mesh':
+            typeDetailsHeading.textContent = 'Wing spoiler';
+            typeDetailsDescription.textContent = 'Generates additional downforce and reduces lift';
+            typeDetailsList.innerHTML = '<li> improves high-speed stability, handling</li><li>enhances the overall aerodynamics of the car</li><li>However, run-flat tires may have a shorter lifespan than conventional tires, and they may be more expensive to replace if they do need to be replaced.y</li>';
+            break;
+          default:
+            break;
+        }
+      });
+    });
+  </script>
+</body>
+</html>

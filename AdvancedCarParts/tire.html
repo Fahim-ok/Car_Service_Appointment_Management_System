@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Seat Cover Types</title>
+  <link rel="stylesheet" href="tire.css">
+</head>
+<body>
+  <header>
+    <h1>Tire Types</h1>
+  </header>
+
+  <div class="container">
+    <div class="type-selector">
+      <ul>
+        <li class="active" data-type="leather">All-season tires</li>
+        <li data-type="neoprene">Performance tires</li>
+        <li data-type="mesh">Run-flat tires</li>
+      </ul>
+    </div>
+    <div class="type-details">
+      <h2>Leather Seat Covers</h2>
+      <p>Our leather seat covers are made from high-quality leather and provide a luxurious look and feel to your car's interior.</p>
+      <ul>
+        <li>Available in black, brown, and tan</li>
+        <li>Easy to clean and maintain</li>
+        <li>Protects your original seats from wear and tear</li>
+      </ul>
+      <button class="button">Buy Now</button>
+    </div>
+  </div>
+
+  <script>
+    const typeSelector = document.querySelector('.type-selector');
+    const typeSelectorItems = typeSelector.querySelectorAll('li');
+    const typeDetails = document.querySelector('.type-details');
+    const typeDetailsHeading = typeDetails.querySelector('h2');
+    const typeDetailsDescription = typeDetails.querySelector('p');
+    const typeDetailsList = typeDetails.querySelector('ul');
+
+    typeSelectorItems.forEach(item => {
+      item.addEventListener('click', () => {
+        // Remove active class from all items
+        typeSelectorItems.forEach(item => item.classList.remove('active'));
+
+        // Set active class on clicked item
+        item.classList.add('active');
+
+        // Update type details based on clicked item
+        const type = item.dataset.type;
+        switch (type) {
+          case 'leather':
+            typeDetailsHeading.textContent = 'All-season tires';
+            typeDetailsDescription.textContent = 'All-season tires are designed to perform well in a variety of weather conditions, making them a versatile option for drivers.';
+            typeDetailsList.innerHTML = '<li>They eliminate the need to switch between summer and winter tires, which can be inconvenient and time-consuming.</li><li>They provide good handling and stability in a variety of driving conditions, which can help to improve safety on the road.</li><li>They are often more affordable than specialized tires, making them a cost-effective option for many drivers.</li>';
+            break;
+          case 'neoprene':
+            typeDetailsHeading.textContent = 'Performance tires';
+            typeDetailsDescription.textContent = 'Performance tires are designed to provide superior handling and grip on both wet and dry roads, making them a popular choice for high-performance vehicles.';
+            typeDetailsList.innerHTML = '<li>Performance tires are a good option for drivers who prioritize speed and handling in their driving experience.</li><li>They provide superior grip and stability, allowing for better control of the vehicle at high speeds or during aggressive maneuvers.</li><li>They can improve the overall performance of a vehicle, allowing it to accelerate faster and handle corners more effectively.</li>';
+            break;
+          case 'mesh':
+            typeDetailsHeading.textContent = 'Run-flat tires';
+            typeDetailsDescription.textContent = 'Run-flat tires are designed to allow a vehicle to continue driving for a short distance after a puncture or blowout, without the need for immediate replacement or repair.';
+            typeDetailsList.innerHTML = '<li>Run-flat tires provide added safety and convenience for drivers, as they allow a vehicle to continue driving to a service center or other safe location after a tire failure.</li><li>They eliminate the need for a spare tire, which can save weight and space in the vehicle.</li><li>However, run-flat tires may have a shorter lifespan than conventional tires, and they may be more expensive to replace if they do need to be replaced.y</li>';
+            break;
+          default:
+            break;
+        }
+      });
+    });
+  </script>
+</body>
+</html>

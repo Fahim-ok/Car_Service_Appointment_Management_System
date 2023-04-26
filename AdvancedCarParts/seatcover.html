@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Seat Cover Types</title>
+  <link rel="stylesheet" href="seatcover.css">
+</head>
+<body>
+  <header>
+    <h1>Seat Cover Types</h1>
+  </header>
+
+  <div class="container">
+    <div class="type-selector">
+      <ul>
+        <li class="active" data-type="leather">Leather</li>
+        <li data-type="neoprene">Neoprene</li>
+        <li data-type="mesh">Mesh</li>
+      </ul>
+    </div>
+    <div class="type-details">
+      <h2>Leather Seat Covers</h2>
+      <p>Our leather seat covers are made from high-quality leather and provide a luxurious look and feel to your car's interior.</p>
+      <ul>
+        <li>Available in black, brown, and tan</li>
+        <li>Easy to clean and maintain</li>
+        <li>Protects your original seats from wear and tear</li>
+      </ul>
+      <button class="button">Buy Now</button>
+    </div>
+  </div>
+
+  <script>
+    const typeSelector = document.querySelector('.type-selector');
+    const typeSelectorItems = typeSelector.querySelectorAll('li');
+    const typeDetails = document.querySelector('.type-details');
+    const typeDetailsHeading = typeDetails.querySelector('h2');
+    const typeDetailsDescription = typeDetails.querySelector('p');
+    const typeDetailsList = typeDetails.querySelector('ul');
+
+    typeSelectorItems.forEach(item => {
+      item.addEventListener('click', () => {
+        // Remove active class from all items
+        typeSelectorItems.forEach(item => item.classList.remove('active'));
+
+        // Set active class on clicked item
+        item.classList.add('active');
+
+        // Update type details based on clicked item
+        const type = item.dataset.type;
+        switch (type) {
+          case 'leather':
+            typeDetailsHeading.textContent = 'Leather Seat Covers';
+            typeDetailsDescription.textContent = 'Our leather seat covers are made from high-quality leather and provide a luxurious look and feel to your car\'s interior.';
+            typeDetailsList.innerHTML = '<li>Available in black, brown, and tan</li><li>Easy to clean and maintain</li><li>Protects your original seats from wear and tear</li>';
+            break;
+          case 'neoprene':
+            typeDetailsHeading.textContent = 'Neoprene Seat Covers';
+            typeDetailsDescription.textContent = 'Our neoprene seat covers are perfect for outdoor enthusiasts and those who need waterproof protection for their seats.';
+            typeDetailsList.innerHTML = '<li>Waterproof and easy to clean</li><li>Durable and long-lasting</li><li>Available in black, gray, and blue</li>';
+            break;
+          case 'mesh':
+            typeDetailsHeading.textContent = 'Mesh Seat Covers';
+            typeDetailsDescription.textContent = 'Our mesh seat covers are perfect for warm climates and provide excellent ventilation for your seats.';
+            typeDetailsList.innerHTML = '<li>Provides excellent ventilation</li><li>Easy to install and remove</li><li>Available in black and gray</li>';
+            break;
+          default:
+            break;
+        }
+      });
+    });
+  </script>
+</body>
+</html>

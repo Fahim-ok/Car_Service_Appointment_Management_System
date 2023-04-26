@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Seat Cover Types</title>
+  <link rel="stylesheet" href="tire.css">
+</head>
+<body>
+  <header>
+    <h1>Turbo Types</h1>
+  </header>
+
+  <div class="container">
+    <div class="type-selector">
+      <ul>
+        <li class="active" data-type="leather">Twin-Turbocharged V6</li>
+        <li data-type="neoprene">Turbocharged Inline-4</li>
+        <li data-type="mesh">Turbocharged Diesel</li>
+      </ul>
+    </div>
+
+    <!-- <img id="spoiler-image" src="" alt="spoiler image"> -->
+
+<!-- <script>
+  const spoilerImage = document.getElementById('spoiler-image');
+  const spoilerTypeItems = document.querySelectorAll('.type-selector li');
+  
+  // Define the image URLs for each spoiler type
+  const imageUrls = {
+    'leather': 'https://hips.hearstapps.com/hmg-prod/images/dwburnett-pcoty-roughs-2-146-1652372829.jpg?crop=1.00xw:0.752xh;0,0.0577xh&resize=1200:*',
+    'neoprene': 'rear_spoiler.jpg',
+    'mesh': 'wing_spoiler.jpg'
+  };
+  
+  // Add click event listeners to each spoiler type item
+  spoilerTypeItems.forEach(item => {
+    item.addEventListener('click', () => {
+      // Remove the "active" class from all items
+      spoilerTypeItems.forEach(item => item.classList.remove('active'));
+      // Add the "active" class to the clicked item
+      item.classList.add('active');
+      // Set the src attribute of the image to the corresponding URL
+      spoilerImage.src = imageUrls[item.dataset.type];
+    });
+  });
+</script> -->
+    <div class="type-details">
+      <h2>Twin-Turbocharged V6</h2>
+      <p> This engine is often used in high-performance cars, such as sports cars and luxury vehicles.</p>
+      <ul>
+        <li>The twin-turbocharging system allows for increased power and acceleration</li>
+        <li>Making it ideal for drivers who want a thrilling driving experience</li>
+        
+      </ul>
+      <button class="button">Buy Now</button>
+    </div>
+  </div>
+
+  <script>
+    const typeSelector = document.querySelector('.type-selector');
+    const typeSelectorItems = typeSelector.querySelectorAll('li');
+    const typeDetails = document.querySelector('.type-details');
+    const typeDetailsHeading = typeDetails.querySelector('h2');
+    const typeDetailsDescription = typeDetails.querySelector('p');
+    const typeDetailsList = typeDetails.querySelector('ul');
+
+    typeSelectorItems.forEach(item => {
+      item.addEventListener('click', () => {
+        // Remove active class from all items
+        typeSelectorItems.forEach(item => item.classList.remove('active'));
+
+        // Set active class on clicked item
+        item.classList.add('active');
+
+        // Update type details based on clicked item
+        const type = item.dataset.type;
+        switch (type) {
+          case 'leather':
+            typeDetailsHeading.textContent = 'Twin-Turbocharged V6';
+            typeDetailsDescription.textContent = 'Reduces air lift under the front of the car and improves downforce';
+            typeDetailsList.innerHTML = '<li>enhances stability and handling at high speeds</li><li>increases traction</li><li>improves fuel efficiency</li>';
+            break;
+          case 'neoprene':
+            typeDetailsHeading.textContent = 'Turbocharged Inline-4';
+            typeDetailsDescription.textContent = ' This engine is commonly found in smaller cars and compact SUVs';
+            typeDetailsList.innerHTML = '<li>The turbocharging system helps to improve fuel efficiency while still maintaining a decent amount of power</li>';
+            break;
+          case 'mesh':
+            typeDetailsHeading.textContent = 'Turbocharged Diesel';
+            typeDetailsDescription.textContent = 'This engine is used in many different types of vehicles, including trucks, SUVs, and some cars.';
+            typeDetailsList.innerHTML = '<li> The turbocharging system helps to increase fuel efficiency and torque</li><li>Making it a popular choice for those who need to do a lot of driving</li>';
+            break;
+          default:
+            break;
+        }
+      });
+    });
+  </script>
+</body>
+</html>
