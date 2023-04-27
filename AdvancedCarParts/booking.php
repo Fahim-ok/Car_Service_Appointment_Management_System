@@ -105,7 +105,7 @@
       <tr class="adminlays">
         <td >
             <div class="col-lg-6 col-md-6 col-sm-6">
-              <p>List of Mechanics : </p>
+              <p>List of Mechanics: </p>
               <select name="mechanic" class="form-control">
                 <option value="Please Select">Please Select</option>
 
@@ -182,7 +182,7 @@
         <tr class="adminlay">
           <td>
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-              <p>Car License Number :</p>
+              <p>Car License Number:</p>
               <input type="text" name="carlicense" class="col-lg-12 col-md-12 col-xs-12 col-sm-12 form-control" >
             </div>
           </td>
@@ -200,7 +200,7 @@
         <tr class="adminlay">
           <td>
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-              <p>Desired Appointment Date :</p>
+              <p>Desired Appointment Date:</p>
               <input type="date" name="appointment" class="col-lg-12 col-md-12 col-xs-12 col-sm-12 form-control" >
             </div>
           </td>
@@ -242,7 +242,7 @@
 
 <div>
 <h1 style="text-align: center;" class="adminlay">Available Mechanic</h1>
-<p  class="adminlay">Each mechanic are allowed to have 5 appointments.<br>Please Check the list of avilable mechanic before placing your request.</p>
+<p  class="adminlay">Each mechanic is allowed to have 5 appointments.<br>Please Check the list of avilable mechanics before placing your request.</p>
     <li><a href="mech1.html">Mechanic 1</a></li>
     <li><a href="mech2.html">Mechanic 2</a></li>
     <li><a href="mech3.html">Mechanic 3</a></li>
