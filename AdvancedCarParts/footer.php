@@ -40,7 +40,7 @@
 				<h3 class="check">Contact Us</h3>
 				<ul class="contact ">
 					<li><p>Phone: +880-1951445484</p></li>
-					<li><p>E-mail: <a href="mailto:sakibapon7@gmail.com">fahimislambd2000@gmail.com</a></p></li>
+					<li><p>E-mail: <a href="#">fahimislambd2000@gmail.com</a></p></li>
 					<li><p>Location : Niketon, <br>mirpur 2, Dhaka, Bangladesh.</p></li>
 				</ul>
 				<h3 class="check">Find us on</h3>
