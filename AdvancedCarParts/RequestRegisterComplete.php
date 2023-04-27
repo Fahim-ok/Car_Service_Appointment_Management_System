@@ -18,7 +18,7 @@
           <td>
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
               <p>Dear Customer</p>
-              <p>We have recieved your Request. We will contact you soon.<br> If you think you have made any mistake please mail at fahimislambd2000.com or open <a href="javascript:void(Tawk_API.toggle())">the chat box</a> and message us.</p>
+              <p>We have recieved your Request. We will contact you soon.<br> If you think you have made any mistake, please send us a mail at fahimislambd2000.com or open <a href="javascript:void(Tawk_API.toggle())">the chat box</a> and message us.</p>
             </div>
           </td>
         </tr>
@@ -29,4 +29,3 @@
 </div>
 
 <?php include ('footer.php') ?>
-
