@@ -227,7 +227,7 @@
    
 <div>
 <h1 style="text-align: center;" class="adminlay">Available Mechanic</h1>
-<p  class="adminlay">Each mechanic are allowed to have 5 appointments.<br>Please Check the list of avilable mechanic before re-assiging.</p>
+<p  class="adminlay">Each mechanic is allowed to have 5 appointments.<br>Please Check the list of avilable mechanics before re-assiging.</p>
     <?php 
         for ($i=1; $i < 6; $i++) { 
           echo '
