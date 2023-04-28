@@ -3,4 +3,4 @@
 
 
 
-####  This project is a web-based Car Service Management System . The system allows car service centers to manage their operations efficiently, including managing appointments, customer data, and vehicle information.
+####  This project is a web-based Car Service Management System for CSE471 . The system allows car service centers to manage their operations efficiently, including managing appointments, customer data, and vehicle information.
